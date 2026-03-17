@@ -9,18 +9,18 @@ public class BookMyStayApp {
         System.out.println("Welcome to my BookMyStayApp");
         System.out.println("Version : 4.0 (Room Search)\n");
 
-        // Create Room Objects
+        
         Room singleRoom = new singleRoom();
         Room doubleRoom = new doubleRoom();
         Room suiteRoom = new suiteRoom();
 
-        // Create Inventory
+        
         RoomInventory inventory = new RoomInventory();
 
-        // Create Search Service
+        
         RoomSearchService searchService = new RoomSearchService();
 
-        // UC4: Read-only Search
+       
         searchService.searchAvailableRooms(
                 inventory,
                 singleRoom,
@@ -32,9 +32,6 @@ public class BookMyStayApp {
     }
 }
 
-///////////////////////////////////////////////////////////
-// ROOM CLASSES
-///////////////////////////////////////////////////////////
 
 abstract class Room {
     protected int NumberOfBeds;
@@ -74,9 +71,7 @@ class suiteRoom extends Room {
     }
 }
 
-///////////////////////////////////////////////////////////
-// INVENTORY (READ ONLY)
-///////////////////////////////////////////////////////////
+
 
 class RoomInventory {
 
@@ -99,9 +94,7 @@ class RoomInventory {
     }
 }
 
-///////////////////////////////////////////////////////////
-// SEARCH SERVICE (UC4)
-///////////////////////////////////////////////////////////
+
 
 class RoomSearchService {
 
